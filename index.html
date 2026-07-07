@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ember Run</title>
+<meta name="description" content="Ember Run — an animated endless runner game">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-wrap">
+
+  <canvas id="game" width="900" height="450"></canvas>
+
+  <div class="hud">
+    <div class="hud-item">
+      <span class="hud-label">Score</span>
+      <span class="hud-value" id="score">0</span>
+    </div>
+    <div class="hud-item">
+      <span class="hud-label">Best</span>
+      <span class="hud-value" id="best">0</span>
+    </div>
+  </div>
+
+  <div class="overlay" id="startScreen">
+    <h1 class="title">EMBER RUN</h1>
+    <p class="subtitle">Guide the ember fox across the dusk hills</p>
+    <div class="controls-hint">
+      <span><kbd>Space</kbd> / <kbd>↑</kbd> jump</span>
+      <span class="dot-sep">·</span>
+      <span>tap screen on mobile</span>
+    </div>
+    <button class="btn-play" id="startBtn">Start run</button>
+  </div>
+
+  <div class="overlay hidden" id="gameOverScreen">
+    <h1 class="title small">RUN OVER</h1>
+    <div class="final-stats">
+      <div><span class="stat-num" id="finalScore">0</span><span class="stat-label">score</span></div>
+      <div><span class="stat-num" id="finalBest">0</span><span class="stat-label">best</span></div>
+    </div>
+    <button class="btn-play" id="retryBtn">Run again</button>
+  </div>
+
+  <div class="mobile-tap-hint" id="tapHint">tap to jump</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
